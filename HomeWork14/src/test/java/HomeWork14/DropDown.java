@@ -17,20 +17,12 @@ public class DropDown extends BaseTest {
     public void dropDown() {
         driver.get("https://crossbrowsertesting.github.io/hover-menu.html");
 
-
-
-
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Dropdown ')]"))).click();
-
-
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Secondary Menu ')]"))).click();
-
-
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Secondary Action')]"))).click();
 
         WebElement text = driver.findElement(By.xpath("//div[@class='jumbotron secondary-clicked']/h1"));
         String textOnPage = text.getText();
-
         System.out.println(textOnPage);
 
 
